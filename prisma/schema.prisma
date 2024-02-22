@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model staff {
+  id         String  @id @db.VarChar(200)
+  userName   String  @db.VarChar(300)
+  firstName  String  @db.VarChar(300)
+  lastName   String  @db.VarChar(300)
+  email      String  @db.VarChar(300)
+  password   String  @db.VarChar(300)
+  address    String?
+  occupation String?
+  state      String?
+}
+
+model user {
+  id         String  @id @db.VarChar(200)
+  userName   String  @db.VarChar(300)
+  firstName  String  @db.VarChar(300)
+  lastName   String  @db.VarChar(300)
+  email      String  @db.VarChar(300)
+  password   String  @db.VarChar(300)
+  address    String?
+  occupation String?
+  state      String?
+}
+
+model errandInfo {
+  errandDescription String   @db.VarChar(200)
+  location          String   @db.VarChar(200)
+  amount            Decimal?
+  ownerId           String?
+  userName          String   @db.VarChar(300)
+  id                String   @id @db.VarChar(200)
+}
+
+model bids {
+  id                String   @id @db.VarChar(200)
+  artisanId         String?
+  amount            Decimal?
+  errandDescription String   @db.VarChar(200)
+  errandId          String   @db.VarChar(200)
+  status            String   @db.VarChar(200)
+}
