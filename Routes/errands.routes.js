@@ -1,5 +1,5 @@
 import express from "express"
-import { deleteErrand, errnadBid, fetchAllErrands, fetchErrand, findErrand, updateErrand } from "../controller/errand.controller.js";
+import { deleteErrand, errnadBid,  fetchErrand, findErrand, updateErrand } from "../controller/errand.controller.js";
 
 const router = express.Router()
 
@@ -8,11 +8,10 @@ const router = express.Router()
 router.post('/errand-bid', errnadBid);
 
 // OTHERS
-router.get('/get-all-errands', fetchAllErrands);
 router.post('/errand-id', findErrand);
-router.delete('/edelete-errand', deleteErrand);
+router.delete('/delete-errand', deleteErrand);
 router.put('/update-errand', updateErrand);
-router.get('/fetch-errand', fetchErrand);
+router.get('/get-all-errands', fetchErrand);
 
 
 

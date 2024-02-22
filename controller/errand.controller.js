@@ -28,10 +28,10 @@ const findErrand = async (req,res) => {
     const {id} = req.body
     try {
         const findingErrand = await errandService.findErrandById(id);
-        const errandBids = [ biddingService ]
+        const errandBids =  biddingService 
         return res.send({
             status: "201",  
-            statusMessage: "Successfully Found",
+            statusMessage: "Successfull",
             data: {
              errand:   findingErrand,
              errandBids
@@ -98,4 +98,4 @@ const fetchAllErrands = async (req, res) => {
     }
 }
 
-export { errnadBid, findErrand, deleteErrand, updateErrand, fetchErrand, fetchAllErrands }
+export { errnadBid, findErrand, deleteErrand,fetchErrand, updateErrand, fetchAllErrands }

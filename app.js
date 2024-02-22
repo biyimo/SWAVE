@@ -4,6 +4,7 @@ import cors from "cors";
 import Prisma from "./utils/prisma.js";
 import errandRouter from './Routes/errands.routes.js'
 import userRouter from "./Routes/user.routes.js"
+import bidRouter from "./Routes/bid.routes.js"
 
 
 const app = express();
@@ -30,6 +31,7 @@ app.use(express.json());
 
 app.use('/errands', errandRouter)
 app.use("/user", userRouter)
+app.use ("/bids", bidRouter)
 
 
 app.listen(PORT, () => console.log("DATABASE IS RUNNING", PORT));
