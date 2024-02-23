@@ -1,6 +1,7 @@
 import userService from "../services/user.service.js";
 import errandService from "../services/errand.service.js";
 
+// CREATE USER / PROFILE
 const createUser = async (req, res) => {
   const {
     firstName,
@@ -34,6 +35,7 @@ const createUser = async (req, res) => {
   }
 };
 
+//  LOGIN USER
 const loginUser = async (req, res) => {
 
 
@@ -78,6 +80,7 @@ const loginUser = async (req, res) => {
   }
 };
 
+// FETCH OWNER ID 
 const fetchOwnerId = async (req, res) => {
   try {
     const fetchtingOwner = await errandService.fetchErrandByOwnerId();

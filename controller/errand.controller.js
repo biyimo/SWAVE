@@ -23,6 +23,7 @@ const errnadBid = async (req,res) => {
     }
 }
 
+// FIND ERRAND
 const findErrand = async (req,res) => {
 
     const {id} = req.body
@@ -42,6 +43,7 @@ const findErrand = async (req,res) => {
     }
 }
 
+// DELETE ERRAND
 const deleteErrand = async (req, res) => {
     try {
         const deletingErrand = await errandService.deleteErrandById();
@@ -56,6 +58,7 @@ const deleteErrand = async (req, res) => {
     }
 }
 
+// UPDATE ERRAND
 const updateErrand = async (req, res) => {
     try {
         const updatingErrand = await errandService.updateErrandById();
@@ -70,6 +73,7 @@ const updateErrand = async (req, res) => {
     }
 }
 
+// FETCH ERRAND
 const fetchErrand = async (req, res) => {
     try {
         const fetchtingErrand = await errandService.findErrandById();
@@ -84,6 +88,7 @@ const fetchErrand = async (req, res) => {
     }
 }
 
+// FETCH ALL ERRANDS 
 const fetchAllErrands = async (req, res) => {
     try {
         const getAllErrands = await errandService.fetchAll();

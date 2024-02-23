@@ -18,6 +18,7 @@ const biddingCounter = async (req,res) => {
     }
 }
 
+// GET ALL BIDS
 const allBids = async (req,res) => {
     try {
         const findingBid = await biddingService.fetchAllBids()
@@ -32,6 +33,7 @@ const allBids = async (req,res) => {
     }
 }
 
+// DELETE A BID
 const deleteBid = async (req,res) => {
     try {
         const bidRemoval = await biddingService.deleteBids()
@@ -46,6 +48,7 @@ const deleteBid = async (req,res) => {
     }
 }
 
+// UPDATE A BID
 const updateBid = async (req,res) => {
     try {
         const updatingBids = await biddingService.updateBids()
