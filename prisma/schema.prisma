@@ -46,5 +46,4 @@ model bids {
   amount            Decimal?
   errandDescription String   @db.VarChar(200)
   errandId          String   @db.VarChar(200)
-  status            String?
 }

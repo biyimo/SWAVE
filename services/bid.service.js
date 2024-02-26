@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 const biddingService = {
 
 
-    async counterBid (artisanId, amount, errandId, errandDescription) {
+    async counterBid (artisanId, amount, errandDescription, errandId) {
         return await Prisma.bids.create({
             data: {
                 id: uuidv4(), 

@@ -3,10 +3,10 @@ import biddingService from "../services/bid.service.js";
 
 // COUNTER BID 
 const biddingCounter = async (req,res) => {
-    const { artisanId, amount, errandId, errandDescription} = req.body
+    const { artisanId, amount, errandDescription, errandId} = req.body
 
     try {
-       const newCounterBid = await biddingService.counterBid( artisanId, amount, errandId, errandDescription)
+       const newCounterBid = await biddingService.counterBid( artisanId, amount, errandDescription, errandId)
 
        return res.send ({
         status: "201",
