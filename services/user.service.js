@@ -81,8 +81,15 @@ const userService = {
     
     async fetchAllUsers() {
         return await Prisma.user.findMany();
-    }
+    },
   
+    async deleteUserById(id) {
+        return await Prisma.user.delete({
+          where: {
+            id: id
+          }
+        });
+      },
    
 }
 

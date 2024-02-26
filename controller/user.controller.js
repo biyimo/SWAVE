@@ -102,11 +102,27 @@ const fetchAllUsers = async (req, res) => {
 
         return res.send({
             status: "201",
-            statusMessage: "All Errands Fetched",
+            statusMessage: "All Users Fetched",
             data: getAllUsers,
         })
     } catch (error) { 
         console.log(error);
     }
 }
-export { createUser, loginUser, fetchOwnerId, fetchAllUsers };
+
+const deleteUser = async (req, res) => {
+  const {id} = req.body
+
+  try{
+    const deletingUser = await userService.deleteUserById(id)
+
+    return res.send({
+      status: "201",
+      statusMessage: "Successfully Deleted",
+      data: deletingUser
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+export { createUser, loginUser, fetchOwnerId, fetchAllUsers, deleteUser };

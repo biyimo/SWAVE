@@ -42,11 +42,11 @@ const deleteBid = async (req,res) => {
 
         return res.send({
             status: "201",
-            statusMessage: "Successfully",
+            statusMessage: "Deleted Successfully",
             data: bidRemoval,
         })
     } catch (error) {
-        console.log();
+        console.log(error);
     }
 }
 

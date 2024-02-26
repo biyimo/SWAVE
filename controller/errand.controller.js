@@ -22,7 +22,6 @@ const errnadBid = async (req,res) => {
         console.log(error);
     }
 }
-// CREATE BID DONE
 
 // FIND ERRAND
 const findErrand = async (req,res) => {
@@ -43,11 +42,12 @@ const findErrand = async (req,res) => {
         console.log(error);
     }
 }
-// DONE
+
 
 // DELETE ERRAND
 const deleteErrand = async (req, res) => {
     const {id} = req.body
+
     try {
         const deletingErrand = await errandService.deleteErrandById(id);
 
@@ -60,7 +60,6 @@ const deleteErrand = async (req, res) => {
         console.log(error);
     }
 }
-// DELETE ERRAND DONE
 
 // UPDATE ERRAND
 const updateErrand = async (req, res) => {
