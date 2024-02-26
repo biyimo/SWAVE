@@ -47,8 +47,9 @@ const findErrand = async (req,res) => {
 
 // DELETE ERRAND
 const deleteErrand = async (req, res) => {
+    const {id} = req.body
     try {
-        const deletingErrand = await errandService.deleteErrandById();
+        const deletingErrand = await errandService.deleteErrandById(id);
 
         return res.send({
             status: "201",  
