@@ -4,7 +4,7 @@ import { allBids, biddingCounter, deleteBid, updateBid } from "../controller/bid
 const router = express.Router()
 
 
-router.get('/bid-counter', biddingCounter);
+router.post('/bid-counter', biddingCounter);
 router.post('/get-all-bids', allBids);
 router.delete('/delete-bid', deleteBid);
 router.put('/update-bid', updateBid);
