@@ -20,16 +20,16 @@ const biddingService = {
         return await Prisma.bids.findMany();
     },
 
-    async updateBids (id, amount, errandDescription) {
+    async updateBids (id, errandDescription, amount) {
         return await Prisma.bids.update({
             where: {
                 artisanId: id
             },
             data: {
-                amount, errandDescription
+                errandDescription, amount
             }
         })
-    },  
+    }, 
 
     async deleteBids (id) {
         return await Prisma.bids.delete({

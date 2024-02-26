@@ -7,7 +7,7 @@ const router = express.Router()
 router.post('/bid-counter', biddingCounter);
 router.get('/get-all-bids', allBids);
 router.delete('/delete-bid', deleteBid);
-router.put('/update-bid', updateBid);
+router.post('/update-bid', updateBid);
 
 
 export default router

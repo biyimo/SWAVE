@@ -52,8 +52,10 @@ const deleteBid = async (req,res) => {
 
 // UPDATE A BID
 const updateBid = async (req,res) => {
+    const {id, errandDescription, amount} = req.body
+
     try {
-        const updatingBids = await biddingService.updateBids()
+        const updatingBids = await biddingService.updateBids(id, errandDescription, amount)
 
         return res.send({
             status: "201",
