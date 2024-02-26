@@ -23,7 +23,7 @@ const biddingService = {
     async updateBids (id, errandDescription, amount) {
         return await Prisma.bids.update({
             where: {
-                artisanId: id
+                 id
             },
             data: {
                 errandDescription, amount
