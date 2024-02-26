@@ -7,7 +7,7 @@ const biddingService = {
     async counterBid (artisanId, amount, errandId, errandDescription) {
         return await Prisma.bids.findFirst({
             data: {
-                artisanId, amount, errandId, errandDescription
+                id: uuidv4(), artisanId, amount, errandId, errandDescription
             }
         })
     },
