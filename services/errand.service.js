@@ -58,13 +58,13 @@ const errandService = {
     });
   },
 
-  async updateErrandById(id, errandDescription, location, amount, ownerId) {
+  async updateErrandById(id, errandDescription, location, amount) {
     return await Prisma.errandInfo.update({
       where: {
         id: id
       },
       data: {
-        errandDescription, location, amount, ownerId
+        errandDescription, location, amount
       }
     });
   },
