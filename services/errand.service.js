@@ -69,7 +69,7 @@ const errandService = {
   },
 
   async fetchErrandByOwnerId(ownerId) {
-    return await Prisma.errandInfo.findUnique({
+    return await Prisma.errandInfo.findFirst({
       where: {
         ownerId: ownerId
       }

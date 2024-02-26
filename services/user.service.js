@@ -79,6 +79,9 @@ const userService = {
         return member;
     },
     
+    async fetchAllUsers() {
+        return await Prisma.user.findMany();
+    }
   
    
 }

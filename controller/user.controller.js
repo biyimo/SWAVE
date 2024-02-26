@@ -95,4 +95,18 @@ const fetchOwnerId = async (req, res) => {
   }
 };
 
-export { createUser, loginUser, fetchOwnerId };
+// FETCH ALL USERS
+const fetchAllUsers = async (req, res) => {
+    try {
+        const getAllUsers = await userService.fetchAll();
+
+        return res.send({
+            status: "201",
+            statusMessage: "All Errands Fetched",
+            data: getAllUsers,
+        })
+    } catch (error) { 
+        console.log(error);
+    }
+}
+export { createUser, loginUser, fetchOwnerId, fetchAllUsers };
