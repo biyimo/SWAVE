@@ -25,7 +25,7 @@ const allBids = async (req,res) => {
 
         return res.send({
             status: "201",
-            statusMessage: "Successfully",
+            statusMessage: "All Bids Fetched",
             data: findingBid,
         })
     } catch (error) {
@@ -49,9 +49,6 @@ const deleteBid = async (req,res) => {
         console.log();
     }
 }
-
-
-
 
 // UPDATE A BID
 const updateBid = async (req,res) => {

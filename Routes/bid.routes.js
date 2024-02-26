@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.post('/bid-counter', biddingCounter);
-router.post('/get-all-bids', allBids);
+router.get('/get-all-bids', allBids);
 router.delete('/delete-bid', deleteBid);
 router.put('/update-bid', updateBid);
 
