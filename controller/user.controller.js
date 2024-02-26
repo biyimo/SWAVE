@@ -98,7 +98,7 @@ const fetchOwnerId = async (req, res) => {
 // FETCH ALL USERS
 const fetchAllUsers = async (req, res) => {
     try {
-        const getAllUsers = await userService.fetchAll();
+        const getAllUsers = await userService.fetchAllUsers();
 
         return res.send({
             status: "201",
