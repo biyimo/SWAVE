@@ -63,9 +63,9 @@ const deleteErrand = async (req, res) => {
 
 // UPDATE ERRAND
 const updateErrand = async (req, res) => {
-    const {errandDescription, location, amount, ownerId} = req.body
+    const {id, errandDescription, location, amount, ownerId} = req.body
     try {
-        const updatingErrand = await errandService.updateErrandById(errandDescription, location, amount, ownerId);
+        const updatingErrand = await errandService.updateErrandById(id, errandDescription, location, amount, ownerId);
 
         return res.send({
             status: "201",  
