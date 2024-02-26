@@ -2,6 +2,14 @@ import { v4 as uuidv4 } from "uuid";
 import Prisma from "../utils/prisma.js";
 
 
+
+  //findErrandById
+  //Delete Errand by id
+  //update errand by id
+  // fetch errand by id (include bids)
+  //fetch errand by ownerid
+
+
 const errandService = {
   async requestErrand( userName, errandDescription, location, amount) {
     const errandRequest = await Prisma.createErrand({
@@ -32,12 +40,6 @@ const errandService = {
             }
         })
     },
-
-  //findErrandById
-  //Delete Errand by id
-  //update errand by id
-  // fetch errand by id (include bids)
-  //fetch errand by ownerid
 
   async findErrandById(id) {
     return await Prisma.errandInfo.findFirst({
