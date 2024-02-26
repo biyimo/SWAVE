@@ -35,8 +35,10 @@ const allBids = async (req,res) => {
 
 // DELETE A BID
 const deleteBid = async (req,res) => {
+    const {id} = req.body
+
     try {
-        const bidRemoval = await biddingService.deleteBids()
+        const bidRemoval = await biddingService.deleteBids(id)
 
         return res.send({
             status: "201",
@@ -47,6 +49,9 @@ const deleteBid = async (req,res) => {
         console.log();
     }
 }
+
+
+
 
 // UPDATE A BID
 const updateBid = async (req,res) => {
