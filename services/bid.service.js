@@ -17,7 +17,7 @@ const biddingService = {
     },
 
     async fetchAllBids () {
-        return await Prisma.bids.findFirst();
+        return await Prisma.bids.findMany();
     },
 
     async updateBids (id, amount, errandDescription) {
