@@ -7,7 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// IGNORE STAFFS
 model staff {
   id         String  @id @db.VarChar(200)
   userName   String  @db.VarChar(300)
@@ -47,5 +46,5 @@ model bids {
   amount            Decimal?
   errandDescription String   @db.VarChar(200)
   errandId          String   @db.VarChar(200)
-  status            String   @db.VarChar(200)
+  status            String?
 }
